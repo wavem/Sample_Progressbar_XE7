@@ -13,12 +13,14 @@ __fastcall TFormMain::TFormMain(TComponent* Owner)
 	: TForm(Owner)
 {
 	m_Count = 0;
+    m_Thread = NULL;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TFormMain::btn_STARTClick(TObject *Sender)
 {
-    m_Count += 10;
+    //m_Thread = new PerformThread();
+    m_Thread = new PerformThread(&m_Count);
 }
 //---------------------------------------------------------------------------
 

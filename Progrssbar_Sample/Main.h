@@ -3,6 +3,8 @@
 #ifndef MainH
 #define MainH
 //---------------------------------------------------------------------------
+#include "Thread.h"
+//---------------------------------------------------------------------------
 #include <System.Classes.hpp>
 #include <Vcl.Controls.hpp>
 #include <Vcl.StdCtrls.hpp>
@@ -10,6 +12,7 @@
 #include <Vcl.ComCtrls.hpp>
 #include <Vcl.ExtCtrls.hpp>
 //---------------------------------------------------------------------------
+class PerformThread;
 class TFormMain : public TForm
 {
 __published:	// IDE-managed Components
@@ -25,6 +28,7 @@ public:		// User declarations
 
 public: // START
 	int m_Count;
+    PerformThread* m_Thread;
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TFormMain *FormMain;
