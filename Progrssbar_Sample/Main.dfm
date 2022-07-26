@@ -48,6 +48,7 @@ object FormMain: TFormMain
     end
   end
   object Timer: TTimer
+    Interval = 50
     OnTimer = TimerTimer
     Left = 1
     Top = 1
